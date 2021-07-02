@@ -1,4 +1,4 @@
-import React, { useRef, useState ,useEffect} from 'react';
+import React, { useRef, useState} from 'react';
 import './Passgen.css';
 
 const Passgen=()=>{
@@ -88,11 +88,11 @@ const Passgen=()=>{
             <label className="head">settings :</label>
             <div className="options">
                 <p>Include UpperCase</p>
-                <input type="checkbox" name="upper" onClick={upperHandle} checked={isupper}/>
+                <input type="checkbox" name="upper" onClick={upperHandle} defaultChecked={isupper}/>
             </div>
             <div className="options">
                 <p>Include LowerCase</p>
-                <input type="checkbox" name="lower" onClick={lowerHandle} checked={islower}/>
+                <input type="checkbox" name="lower" onClick={lowerHandle} defaultChecked={islower}/>
             </div>
             <div className="options">
                 <p>Include Numbers</p>

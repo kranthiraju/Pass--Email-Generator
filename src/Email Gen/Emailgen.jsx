@@ -31,25 +31,22 @@ const Emailgen=()=>{
     }
 
     useEffect(() => {
-        generateEmail()
-    }, [list]);
-
-    const generateEmail=()=>{
         setEmails(
-             {
-                a:list.first+list.last+list.fav+Math.floor(Math.random()*100)+'@gmail.com',
-             
-             
-                 b:list.last+list.first+list.fav+Math.floor(Math.random()*100)+'@gmail.com',
-             
-             
-                 c:list.first+list.last+Math.floor(Math.random()*100)+list.fav+'@gmail.com',
-             
-             
-                 d:list.last+list.first+Math.floor(Math.random()*100)+list.fav+'@gmail.com',
-             }
-             );
-    }
+            {
+               a:list.first+list.last+list.fav+Math.floor(Math.random()*100)+'@gmail.com',
+            
+            
+                b:list.last+list.first+list.fav+Math.floor(Math.random()*100)+'@gmail.com',
+            
+            
+                c:list.first+list.last+Math.floor(Math.random()*100)+list.fav+'@gmail.com',
+            
+            
+                d:list.last+list.first+Math.floor(Math.random()*100)+list.fav+'@gmail.com',
+            }
+            );
+    },[list]);
+
 
     const pasteHandle=(e)=>{
         setFinal(e.target.closest('li').innerHTML);
