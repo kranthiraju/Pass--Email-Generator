@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+body{
+    background: rgb(255, 84, 255);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App
+{
+    text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .toggle
+{
+    position: absolute;
+    top: 1%;
+    left: 2.5%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .toggle .t_back
+{
+    content: '';
+    width: 4rem;
+    height: 1.7rem;
+    border-radius: 2rem;
+    background: rgba(0, 102, 102, 0.267);
+    transition: 0.5s all;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .toggle .tgl
+{
+    position: relative;
+    content: '';
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background: #0a0e31;
+    border: 3px solid white;
+    left: -20%;
+    transition: 0.5s all;
 }

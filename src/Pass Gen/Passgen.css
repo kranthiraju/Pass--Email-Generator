@@ -1,0 +1,178 @@
+.passgen
+{
+    position: absolute;
+    top: 2.5%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0a0e31;
+    width: 30%;
+    height: 90%;
+    border-radius: 1rem;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0px 15px 55px -5px rgba(0, 102, 102, 1);
+    animation: rot 2s;
+}
+.passgen h1
+{
+    position: relative;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+.passgen label
+{
+    background: rgba(0, 102, 102, 0.267);
+    width: 80%;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.passgen .head
+{
+    position: relative;
+    background: none;
+    font-size: 1rem;
+    color: rgba(0, 102, 102, 1);
+    font-weight: bold;
+    cursor: none;
+    text-transform: uppercase;
+}
+.passgen p
+{
+    position: relative;
+    top: -10.5%;
+    left: 13%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.passgen .slider
+{
+    position: relative;
+    top: -8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 102, 102, 0.267);
+    width: 80%;
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+.passgen .slider p
+{
+    position: relative;
+    left: 0%;
+    font-size: 1.5rem;
+    margin: 3%;
+    font-weight: normal;
+}
+.passgen .slider input
+{
+    width: 80%;
+    -webkit-appearance: none;
+    height: 0.1rem;
+    background: #ffffff54;
+}
+.passgen .slider input::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+}
+.passgen .options
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    border-radius: 1rem;
+    background: rgba(0, 102, 102, 0.267);
+    margin-bottom: 1rem;
+}
+.passgen .options p
+{
+    font-size: 1.2rem;
+    font-weight: 500;
+    left: 0%;
+}
+.passgen .options input
+{
+    transform: scale(2);
+    cursor: pointer;
+}
+.passgen button
+{
+    border: none;
+    outline: none;
+    background: rgb(255, 84, 255);
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px -5px rgba(255, 255, 255, 0.267);
+    transition: 1s all;
+    margin-top: 2rem;
+}
+.passgen button:hover
+{
+    background: white;
+    color: rgb(255, 84, 255);
+}
+.passgen button:active
+{
+    transform: scale(0.8);
+}
+.passgen .tooltip
+{
+    position: absolute;
+    top: 13.5%;
+    right: -30%;
+    width: 30%;
+    background: rgb(255, 195, 195);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #0a0e31;
+    padding: 0.3rem;
+    cursor: none;
+    opacity: 0;
+    transition: 0.5s all;
+}
+.passgen .tooltip::before
+{
+    content: '';
+    position: absolute;
+    left: -4%;
+    top: 25%;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    background: rgb(255, 195, 195);
+}
+.passgen label:hover +.tooltip
+{
+    right: -22%;
+    opacity: 1;
+}
+@keyframes rot
+{
+    0%{
+        transform: rotateY(-180deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
